@@ -1,0 +1,25 @@
+.desktop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  margin: 0 10px; /*margin 0 auto for distributed icons*/
+}
+
+.desktop-icon {
+  width: 100%;
+  border-radius: 15%;
+  transition-duration: 0.2s;
+}
+
+.desktop-icon:hover {
+  transform: scale(1.1);
+  /* translate: 1px; */
+  transition: transform 0.2s ease-in-out;
+}
+
+.desktop-text {
+  font-weight: bold;
+  font-size: 1em;
+  color: #333;
+}

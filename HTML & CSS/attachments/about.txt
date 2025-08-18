@@ -1,0 +1,13 @@
+Ever wanted an application that isn’t just a mess of features and bugs duct-taped together?
+
+Hi, I'm Maryam, a high-performing computer science student with experience in Flutter, .NET, Laravel, and Node.js.
+
+I’ve always had a deep interest in building real software, not just solving textbook problems. That passion grew stronger when I realized how many developers struggled to connect clean architecture with real user needs. So I took action, diving into best practices, leading team projects, and competing in coding contests to sharpen both my technical and problem-solving skills.
+
+Balancing university, self-learning, and standing out in a saturated space wasn’t easy. But I focused on what many overlooked: combining adaptability, cross-discipline skills, and hands-on experience.
+
+The result? I became the go-to person in my teams for end-to-end development, from backend architecture and database modeling to frontend delivery and user experience. I’ve stood out in bootcamps, competitions, and internships by bringing both structure and creativity to every project.
+
+From competitive programming to real-world apps, I love solving problems, learning fast, and writing code that actually makes sense, not just code that runs.
+
+Always up for a challenge, a new stack, or a good debugging session.

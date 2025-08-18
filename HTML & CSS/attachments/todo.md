@@ -1,0 +1,7 @@
+- [ ] Research backend development best practices
+- [✔] Set up a basic server using Node.js
+- [✔] Design and implement RESTful APIs
+- [✔] Integrate a database (e.g., MongoDB or PostgreSQL)
+- [ ] Implement user authentication and authorization
+- [✔] Test API endpoints using tools like Postman
+- [ ] Document the API endpoints and backend architecture
