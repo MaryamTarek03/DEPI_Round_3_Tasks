@@ -4,12 +4,12 @@
   --primary-pink: #d94c5e;
   --secondary-pink: #ffb6c1;
   --neon-purple: #d364ff;
-  --neon-blue: #18dcff;
+  --neon-blue: #dcbdbb;
   --dark-purple: #2b1a54;
   --dark-text: #1a0b2e;
   --light-text: #8878ab;
   --white: #ffffff;
-  --light-gray: #eefeff;
+  --light-gray: #fffaf8;
 }
 
 html {
@@ -255,13 +255,13 @@ main {
 .home-image {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
 }
 
 .home-image img {
-  width: 600px;
+  height: 80vh;
   border-radius: 5%;
   transition: transform 0.3s ease;
 }
@@ -822,6 +822,7 @@ main {
 }
 
 .achievements {
+  border-radius: 12px;
   list-style: none;
   padding: 0;
   margin-top: 1rem;
