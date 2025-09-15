@@ -5,7 +5,28 @@
   --secondary-color: #f2e8e7c4;
   --text-color: #231d4f;
   --text-secondary-color: #848199;
+  --logo-color: #231d4f;
   --border-radius: 25px;
+  --bg-gradient: linear-gradient(to bottom, #a6acd6, #dec5c8);
+  --container-bg: linear-gradient(to top, #a6acd6, #dec5c8, #e4e2e3);
+  --button-secondary-bg: #857d9c;
+  --selected-plan-bg: #231d4f;
+  --selected-plan-accent: #403879;
+  --check-icon-bg: #383360;
+}
+
+[data-theme="dark"] {
+  --primary-color: #bb6bd9;
+  --secondary-color: #2a2a2a;
+  --text-color: #ffffff;
+  --text-secondary-color: #b0b0b0;
+  --logo-color: #ffffff;
+  --bg-gradient: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+  --container-bg: linear-gradient(to top, #1a1a1a, #2d2d2d, #3a3a3a);
+  --button-secondary-bg: #4a4a4a;
+  --selected-plan-bg: #c5bdf8;
+  --selected-plan-accent: #9c4fb8;
+  --check-icon-bg: #6a6a6a;
 }
 
 * {
@@ -25,7 +46,7 @@ body {
   font-family: "Poppins", Arial, sans-serif;
   color: var(--text-color);
   /* font-weight: 100; */
-  background: linear-gradient(to bottom, #a6acd6, #dec5c8);
+  background: var(--bg-gradient);
 }
 
 nav {
@@ -36,11 +57,24 @@ nav {
   /* background-color: #f8f8f8; */
 }
 
-.logo {
+.nav-items-right {
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-left: 1.5rem;
+  gap: 1rem;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: rgba(187, 107, 217, 0.1);
 }
 
 .big-container {
@@ -48,7 +82,7 @@ nav {
   height: 100%;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to top, #a6acd6, #dec5c8, #e4e2e3);
+  background: var(--container-bg);
 }
 
 .container {
@@ -180,7 +214,7 @@ nav {
   transform: translate(-50%, -50%);
   width: 10%;
   height: 100%;
-  background-color: #383360;
+  background-color: var(--check-icon-bg);
   border-radius: 50%;
   z-index: -1;
 }
@@ -195,7 +229,7 @@ nav {
 .plan .button {
   width: 100%;
   margin-top: auto;
-  background-color: #857d9c;
+  background-color: var(--button-secondary-bg);
   text-align: center;
 }
 .plan.selected {
@@ -214,7 +248,7 @@ nav {
   width: 100%;
   height: 100%;
   padding: 2rem 1.5rem;
-  background-color: #231d4f;
+  background-color: var(--selected-plan-bg);
   border-radius: 20px;
   z-index: -1;
 }
@@ -224,7 +258,7 @@ nav {
   position: absolute;
   top: -2rem;
   right: 0rem;
-  background-color: #403879;
+  background-color: var(--selected-plan-accent);
   color: var(--primary-color);
   font-size: 0.6rem;
   font-weight: bold;
@@ -249,4 +283,27 @@ nav {
 
 .spacer {
   height: 2rem;
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .plan.selected::after {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .plan.selected .details,
+[data-theme="dark"] .plan.selected .details .price span,
+[data-theme="dark"] .plan.selected .details .name {
+  color: #231d4f;
+}
+
+[data-theme="dark"] .plan.selected .details ul li::before {
+  color: #231d4f;
+}
+
+[data-theme="dark"] .dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .big-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
