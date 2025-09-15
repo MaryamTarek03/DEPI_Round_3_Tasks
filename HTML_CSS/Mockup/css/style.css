@@ -1,27 +1,252 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --primary-color: #bb6bd9;
+  --secondary-color: #f2e8e7c4;
+  --text-color: #231d4f;
+  --text-secondary-color: #848199;
+  --border-radius: 25px;
+}
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+h1 {
+  font-weight: 400;
 }
 
 body {
   margin: 0;
   font-family: "Poppins", Arial, sans-serif;
-  height: 100vh;
+  color: var(--text-color);
+  /* font-weight: 100; */
+  background: linear-gradient(to bottom, #a6acd6, #dec5c8);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: #f8f8f8;
+  align-items: center;
+  padding: 1rem 2rem;
+  /* background-color: #f8f8f8; */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 1.5rem;
+}
+
+.big-container {
+  margin: 2% 15%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to top, #a6acd6, #dec5c8, #e4e2e3);
+}
+
+.container {
+  padding: 0 8rem;
+}
+
+.container::before {
+  content: url("../assets/dots.svg");
+  position: absolute;
+  top: -1rem;
+  right: 7rem;
+  z-index: -1;
+}
+
+.container::after {
+  content: url("../assets/dots.svg");
+  position: absolute;
+  bottom: 0rem;
+  left: 7rem;
+  z-index: -1;
 }
 
 .button {
-  background-color: #bb6bd9;
+  background-color: var(--primary-color);
+  font-size: 0.7rem;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border-radius: 25px;
   cursor: pointer;
+}
+
+.selection {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.selection .text {
+  color: var(--text-secondary-color);
+  font-size: 0.9rem;
+  margin-right: 4rem;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+  backdrop-filter: blur(100px);
+  padding: 0;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  font-size: 0.6rem;
+  font-weight: 300;
+}
+
+.monthly {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 25px;
+  height: 100%;
+  align-content: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.yearly {
+  padding: 0.5rem 1rem;
+}
+
+.plans {
+  /* background-color: var(--secondary-color); */
+  background-color: var(--secondary-color);
+  display: flex;
+  border-radius: var(--border-radius);
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 2rem 2rem;
+  margin: 2rem 0;
+}
+
+.plan {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.plan .details {
+  font-size: 0.7rem;
+  color: var(--text-secondary-color);
+}
+
+.plan .details .price span {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.plan .details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.plan .details ul li {
+  margin: 0.5rem 0;
+}
+.plan .details ul li::before {
+  content: url("../assets/check.svg");
+  /* content: "✓"; */
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.plan .details ul li {
+  position: relative;
+}
+
+.plan .details ul li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  height: 100%;
+  background-color: #383360;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.plan .details .name {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.plan .button {
+  width: 100%;
+  margin-top: auto;
+  background-color: #857d9c;
+  text-align: center;
+}
+.plan.selected {
+  color: white;
+  /* background-color: #231d4f; */
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+}
+
+.plan.selected::before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: -1.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  background-color: #231d4f;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.plan.selected::after {
+  content: "MOST POPULAR";
+  position: absolute;
+  top: -2rem;
+  right: 0rem;
+  background-color: #403879;
+  color: var(--primary-color);
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.plan.selected .details,
+.plan.selected .details .price span,
+.plan.selected .details .name {
+  color: white;
+}
+
+.plan.selected .details ul li::before {
+  color: white;
+}
+
+.plan.selected .button {
+  background-color: var(--primary-color);
+}
+
+.spacer {
+  height: 2rem;
 }
